@@ -3,15 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>STOIC AF: The Philosophy of People Who Win</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;700&display=swap">
+  <title>STOIC AF</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --black: #000;
+      --transparent-white: rgba(255, 255, 255, 0.3);
+      --transparent-black: rgba(0, 0, 0, 0.3);
+      --neon-purple: #6c63ff;
       --gold: #fab005;
-      --neon-red: #ff3864;
-      --white: #fff;
-      --dark-gradient: linear-gradient(135deg, #1a1a1a, #000000);
+      --body-bg: linear-gradient(135deg, #1c1e3e, #000);
+      --glass-blur: blur(10px);
+      --text-glow: 0 0 10px rgba(255, 255, 255, 0.8);
     }
     * {
       margin: 0;
@@ -20,97 +22,124 @@
     }
     body {
       font-family: 'Montserrat', sans-serif;
-      background: var(--dark-gradient);
-      color: var(--white);
-      line-height: 1.6;
+      background: var(--body-bg);
+      color: #fff;
       overflow-x: hidden;
     }
     header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
       text-align: center;
-      padding: 50px 20px;
+      height: 100vh;
+      background: url('https://via.placeholder.com/1920x1080') no-repeat center center/cover;
+      position: relative;
+    }
+    header::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      backdrop-filter: var(--glass-blur);
+      background: var(--transparent-black);
     }
     header h1 {
       font-family: 'Bebas Neue', sans-serif;
       font-size: 4rem;
+      text-transform: uppercase;
       color: var(--gold);
+      z-index: 1;
+      text-shadow: var(--text-glow);
+      margin-bottom: 1rem;
     }
     header p {
       font-size: 1.5rem;
-      margin: 15px 0;
+      text-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
+      z-index: 1;
+      margin-bottom: 20px;
     }
-    .hero-buttons {
+    header .buttons {
       margin-top: 20px;
+      z-index: 1;
     }
-    .hero-buttons a {
+    header .buttons a {
       text-decoration: none;
-      display: inline-block;
       padding: 15px 30px;
       margin: 10px;
       border-radius: 5px;
       font-size: 1.2rem;
       font-weight: bold;
       transition: background 0.3s ease;
+      backdrop-filter: var(--glass-blur);
+      box-shadow: var(--text-glow);
     }
-    .hero-buttons a.challenge {
-      background: var(--neon-red);
-      color: var(--white);
+    .buttons .cta {
+      background: var(--neon-purple);
+      color: white;
     }
-    .hero-buttons a.legion {
+    .buttons .cta:hover {
+      background: #584dfa;
+    }
+    .buttons .join {
       background: var(--gold);
-      color: var(--black);
+      color: #000;
     }
-    .hero-buttons a:hover {
-      opacity: 0.8;
+    .buttons .join:hover {
+      background: #e4a700;
     }
-    .social-proof {
-      text-align: center;
-      padding: 20px;
-      background: #111;
-      margin-top: 30px;
-    }
-    .social-proof h3 {
-      font-size: 1.5rem;
-      color: var(--gold);
-    }
-    .social-proof .logos {
-      margin: 20px 0;
+    .section {
+      padding: 50px 20px;
       display: flex;
+      flex-wrap: wrap;
       justify-content: center;
-      gap: 20px;
+      align-items: center;
+    }
+    .glass-card {
+      backdrop-filter: var(--glass-blur);
+      background: var(--transparent-white);
+      padding: 20px;
+      margin: 15px;
+      border-radius: 15px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+      width: 300px;
+      text-align: center;
+      color: white;
     }
     footer {
       text-align: center;
-      padding: 10px 0;
-      background: #222;
-      margin-top: 30px;
-    }
-    footer p {
-      font-size: 0.9rem;
+      padding: 20px;
+      background: var(--transparent-black);
+      backdrop-filter: var(--glass-blur);
+      color: white;
+      box-shadow: 0 -8px 15px rgba(0, 0, 0, 0.2);
     }
   </style>
 </head>
 <body>
   <header>
     <h1>STOIC AF</h1>
-    <p>The Philosophy of People Who Win</p>
-    <div class="hero-buttons">
-      <a href="#challenge" class="challenge">Take the 30-Day Challenge</a>
-      <a href="#community" class="legion">Join the Legion</a>
+    <p>The Modern Philosophy of Resilient Minds</p>
+    <div class="buttons">
+      <a href="#challenge" class="cta">Take the 30-Day Challenge</a>
+      <a href="#legion" class="join">Join the Legion</a>
     </div>
   </header>
-  
-  <section class="social-proof">
-    <h3>50,000+ Rebels Training Their Minds</h3>
-    <div class="logos">
-      <img src="logo-placeholder.png" alt="Partner Logo" width="80">
-      <img src="logo-placeholder.png" alt="Media Logo" width="80">
-      <img src="logo-placeholder.png" alt="Influencer Logo" width="80">
+  <section class="section">
+    <div class="glass-card">
+      <h2>Amor Fati</h2>
+      <p>Love your fate, and become unshakeable.</p>
     </div>
-    <small>*Featured in Top Gyms & Podcasts*</small>
+    <div class="glass-card">
+      <h2>Memento Mori</h2>
+      <p>Remember: You are mortal, so live boldly.</p>
+    </div>
+    <div class="glass-card">
+      <h2>The Obstacle is the Way</h2>
+      <p>Face every challenge with wisdom.</p>
+    </div>
   </section>
-
   <footer>
-    <p>© 2026 STOIC AF. All Rights Reserved. | <a href="#" style="color: var(--gold);">Privacy</a> | <a href="#" style="color: var(--gold);">Terms</a></p>
+    <p>© 2026 STOIC AF | Built with Resilience. All rights reserved.</p>
   </footer>
 </body>
 </html>
